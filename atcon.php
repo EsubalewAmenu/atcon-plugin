@@ -30,6 +30,13 @@ if ( ! defined( 'WPINC' ) ) {
 	die;
 }
 
+if(!defined("ds_atcon"))
+define("ds_atcon","ds_atcon");
+if(!defined("ds_atcon_PLAGIN_DIR"))
+define("ds_atcon_PLAGIN_DIR",plugin_dir_path( __FILE__ ));
+if(!defined("ds_atcon_PLAGIN_URL"))
+define("ds_atcon_PLAGIN_URL", plugin_dir_url(__FILE__));
+
 /**
  * Currently plugin version.
  * Start at version 1.0.0 and use SemVer - https://semver.org

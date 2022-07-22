@@ -122,6 +122,12 @@ class Atcon {
 		 */
 		require_once plugin_dir_path( dirname( __FILE__ ) ) . 'public/class-atcon-public.php';
 
+		require_once plugin_dir_path( dirname( __FILE__ ) ) . 'public/controller/about.php';
+		require_once plugin_dir_path( dirname( __FILE__ ) ) . 'public/controller/faq.php';
+		require_once plugin_dir_path( dirname( __FILE__ ) ) . 'public/controller/portfolio.php';
+		require_once plugin_dir_path( dirname( __FILE__ ) ) . 'public/controller/services.php';
+		require_once plugin_dir_path( dirname( __FILE__ ) ) . 'public/controller/team.php';
+
 		$this->loader = new Atcon_Loader();
 
 	}
@@ -172,6 +178,21 @@ class Atcon {
 
 		$this->loader->add_action( 'wp_enqueue_scripts', $plugin_public, 'enqueue_styles' );
 		$this->loader->add_action( 'wp_enqueue_scripts', $plugin_public, 'enqueue_scripts' );
+
+		$DS_about = new DS_about();
+		$this->loader->add_shortcode( 'ds_about_a1_code', $DS_about, 'ds_about_a1_code' );
+		$this->loader->add_shortcode( 'ds_about_steps_code', $DS_about, 'ds_about_steps_code' );
+		$this->loader->add_shortcode( 'ds_about_features_code', $DS_about, 'ds_about_features_code' );
+
+		$DS_faq = new DS_faq();
+		$this->loader->add_shortcode( 'ds_faq_home_code', $DS_faq, 'ds_faq_home_code' );
+
+		$DS_portfolio = new DS_portfolio();
+		$this->loader->add_shortcode( 'ds_portfolio_home_code', $DS_portfolio, 'ds_portfolio_home_code' );
+
+		$DS_services = new DS_services();
+		$this->loader->add_shortcode( 'ds_services_home_code', $DS_services, 'ds_services_home_code' );
+		$this->loader->add_shortcode( 'ds_services_testimonials_code', $DS_services, 'ds_services_testimonials_code' );
 
 	}
 
