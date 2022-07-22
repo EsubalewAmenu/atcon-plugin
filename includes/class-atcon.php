@@ -117,6 +117,13 @@ class Atcon {
 		require_once plugin_dir_path( dirname( __FILE__ ) ) . 'admin/class-atcon-admin.php';
 
 		require_once plugin_dir_path( dirname( __FILE__ ) ) . 'admin/controller/about.php';
+		require_once plugin_dir_path( dirname( __FILE__ ) ) . 'admin/controller/faq.php';
+		require_once plugin_dir_path( dirname( __FILE__ ) ) . 'admin/controller/feature.php';
+		require_once plugin_dir_path( dirname( __FILE__ ) ) . 'admin/controller/portfolio.php';
+		require_once plugin_dir_path( dirname( __FILE__ ) ) . 'admin/controller/service.php';
+		require_once plugin_dir_path( dirname( __FILE__ ) ) . 'admin/controller/step.php';
+		require_once plugin_dir_path( dirname( __FILE__ ) ) . 'admin/controller/team.php';
+		require_once plugin_dir_path( dirname( __FILE__ ) ) . 'admin/controller/testimonial.php';
 
 		/**
 		 * The class responsible for defining all actions that occur in the public-facing
@@ -167,6 +174,27 @@ class Atcon {
 
 		$DS_Admin_abouts = new DS_Admin_abouts();
 		$this->loader->add_action('init', $DS_Admin_abouts, 'ds_about_post_type_registration_init', 1, 1);
+
+		$DS_Admin_faqs = new DS_Admin_faqs();
+		$this->loader->add_action('init', $DS_Admin_faqs, 'ds_faq_post_type_registration_init', 1, 1);
+
+		$DS_Admin_features = new DS_Admin_features();
+		$this->loader->add_action('init', $DS_Admin_features, 'ds_feature_post_type_registration_init', 1, 1);
+
+		$DS_Admin_portfolios = new DS_Admin_portfolios();
+		$this->loader->add_action('init', $DS_Admin_portfolios, 'ds_portfolio_post_type_registration_init', 1, 1);
+
+		$DS_Admin_services = new DS_Admin_services();
+		$this->loader->add_action('init', $DS_Admin_services, 'ds_service_post_type_registration_init', 1, 1);
+
+		$DS_Admin_steps = new DS_Admin_steps();
+		$this->loader->add_action('init', $DS_Admin_steps, 'ds_step_post_type_registration_init', 1, 1);
+
+		$DS_Admin_teams = new DS_Admin_teams();
+		$this->loader->add_action('init', $DS_Admin_teams, 'ds_team_post_type_registration_init', 1, 1);
+
+		$DS_Admin_testimonials = new DS_Admin_testimonials();
+		$this->loader->add_action('init', $DS_Admin_testimonials, 'ds_testimonial_post_type_registration_init', 1, 1);
 	}
 
 	/**

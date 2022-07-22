@@ -29,10 +29,24 @@ class DS_services
 
 	public function ds_services_home_code()
 	{
+
+		$args = array(
+			'post_type'      => 'services',
+			'post_status'    => 'publish',
+			// 'posts_per_page' => 3,
+		);
+		$services = get_posts($args);
 	include_once ds_atcon_PLAGIN_DIR . '/public/partials/services/home.php';
 	}
 	public function ds_services_testimonials_code()
 	{
+
+		$args = array(
+			'post_type'      => 'testimonialss',
+			'post_status'    => 'publish',
+			// 'posts_per_page' => 3,
+		);
+		$testimonialss = get_posts($args);
 	include_once ds_atcon_PLAGIN_DIR . '/public/partials/services/testimonials.php';
 	}
 

@@ -33,18 +33,31 @@ class DS_about
         $args = array(
             'post_type'      => 'abouts',
             'post_status'    => 'publish',
-            'posts_per_page' => 3,
+            // 'posts_per_page' => 3,
         );
         $abouts = get_posts($args);
 
 	include_once ds_atcon_PLAGIN_DIR . '/public/partials/about/a1.php';
 	}
 	public function ds_about_steps_code()
-	{
+	{        
+		$args = array(
+		'post_type'      => 'steps',
+		'post_status'    => 'publish',
+		// 'posts_per_page' => 3,
+	);
+	$steps = get_posts($args);
 	include_once ds_atcon_PLAGIN_DIR . '/public/partials/about/steps.php';
 	}
 	public function ds_about_features_code()
 	{
+		   
+		$args = array(
+			'post_type'      => 'features',
+			'post_status'    => 'publish',
+			// 'posts_per_page' => 3,
+		);
+		$features = get_posts($args);
 	include_once ds_atcon_PLAGIN_DIR . '/public/partials/about/features.php';
 	}
 

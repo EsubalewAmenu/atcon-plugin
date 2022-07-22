@@ -29,6 +29,13 @@ class DS_team
 
 	public function ds_team_home_code()
 	{
+
+		$args = array(
+			'post_type'      => 'teams',
+			'post_status'    => 'publish',
+			// 'posts_per_page' => 3,
+		);
+		$teams = get_posts($args);
 	include_once ds_atcon_PLAGIN_DIR . '/public/partials/team/home.php';
 	}
 

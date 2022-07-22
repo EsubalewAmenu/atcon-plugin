@@ -29,6 +29,13 @@ class DS_faq
 
 	public function ds_faq_home_code()
 	{
+
+		$args = array(
+			'post_type'      => 'faqs',
+			'post_status'    => 'publish',
+			// 'posts_per_page' => 3,
+		);
+		$faqs = get_posts($args);
 	include_once ds_atcon_PLAGIN_DIR . '/public/partials/faq/home.php';
 	}
 
