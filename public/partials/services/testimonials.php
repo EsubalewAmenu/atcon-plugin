@@ -10,7 +10,7 @@
     <div class="testimonials-slider swiper" data-aos-delay="100">
       <div class="swiper-wrapper">
 
-        <div class="testimonials-slider swiper" data-aos="fade-up" data-aos-delay="100">
+        <div class="testimonials-slider swiper"  data-aos-delay="100">
           <div class="swiper-wrapper">
 
           <?php foreach ($testimonials as $testimonial) { ?>

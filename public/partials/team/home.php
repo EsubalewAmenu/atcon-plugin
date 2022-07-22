@@ -10,7 +10,7 @@
     <div class="row">
 
         <?php foreach ($teams as $team) { ?>
-          <div class="col-xl-3 col-lg-4 col-md-6" data-aos="fade-up">
+          <div class="col-xl-3 col-lg-4 col-md-6" >
             <div class="member">
               <img src="assets/img/team/team-1.jpg" class="img-fluid" alt="">
               <div class="member-info">

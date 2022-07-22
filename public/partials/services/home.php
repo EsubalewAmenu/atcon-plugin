@@ -18,7 +18,7 @@
 
         <div class="row">
         <?php foreach ($services as $service) { ?>
-          <div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0" data-aos="fade-up">
+          <div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0" >
             <div class="icon-box icon-box-pink">
               <div class="icon"><i class="bx bxl-dribbble"></i></div>
               <h4 class="title"><a href=""><?php echo $service->post_title; ?></a></h4>

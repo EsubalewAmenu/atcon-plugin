@@ -3,7 +3,7 @@
   <div class="container">
 
     <div class="row">
-      <div class="col-lg-4 mb-5 mb-lg-0" data-aos="fade-right">
+      <div class="col-lg-4 mb-5 mb-lg-0" >
         <ul class="nav nav-tabs flex-column">
 
           <?php foreach ($features as $feature) { ?>
