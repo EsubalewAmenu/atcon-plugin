@@ -1,3 +1,6 @@
+<!-- ======= About Section ======= -->
+<section id="about" class="about">
+  <div class="container">
 
     <!-- ======= Steps Section ======= -->
     <section id="steps" class="steps section-bg">

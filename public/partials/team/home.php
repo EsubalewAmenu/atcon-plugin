@@ -1,14 +1,13 @@
+<!-- ======= Team Section ======= -->
+<section id="team" class="team">
+  <div class="container">
 
-    <!-- ======= Team Section ======= -->
-    <section id="team" class="team">
-      <div class="container">
+    <div class="section-title">
+      <h2>Team</h2>
+      <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit in iste officiis commodi quidem hic quas.</p>
+    </div>
 
-        <div class="section-title" data-aos="fade-up">
-          <h2>Team</h2>
-          <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit in iste officiis commodi quidem hic quas.</p>
-        </div>
-
-        <div class="row">
+    <div class="row">
 
         <?php foreach ($teams as $team) { ?>
           <div class="col-xl-3 col-lg-4 col-md-6" data-aos="fade-up">
@@ -31,6 +30,9 @@
           <?php } ?>
 
         </div>
-
       </div>
-    </section><!-- End Team Section -->
+
+    </div>
+
+  </div>
+</section><!-- End Team Section -->
