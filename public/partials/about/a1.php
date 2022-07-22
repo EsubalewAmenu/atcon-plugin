@@ -12,11 +12,13 @@
             <p data-aos="fade-up">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
             </p>
+            <?php foreach ($abouts as $about) { ?>
             <div class="icon-box" data-aos="fade-up">
               <i class="bx bx-receipt"></i>
-              <h4>Corporis voluptates sit</h4>
-              <p>Consequuntur sunt aut quasi enim aliquam quae harum pariatur laboris nisi ut aliquip</p>
+              <h4><?php echo $about->post_title; ?></h4>
+              <p><?php echo $about->post_content ?></p>
             </div>
+            <?php } ?>
 
             <div class="icon-box" data-aos="fade-up" data-aos-delay="100">
               <i class="bx bx-cube-alt"></i>

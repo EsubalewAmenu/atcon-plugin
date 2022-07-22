@@ -116,6 +116,8 @@ class Atcon {
 		 */
 		require_once plugin_dir_path( dirname( __FILE__ ) ) . 'admin/class-atcon-admin.php';
 
+		require_once plugin_dir_path( dirname( __FILE__ ) ) . 'admin/controller/about.php';
+
 		/**
 		 * The class responsible for defining all actions that occur in the public-facing
 		 * side of the site.
@@ -136,9 +138,7 @@ class Atcon {
 	 * Define the locale for this plugin for internationalization.
 	 *
 	 * Uses the Atcon_i18n class in order to set the domain and to register the hook
-	 * with WordPress.
-	 *
-	 * @since    1.0.0
+	 * with WordPress.ds_slider_post_type_registration_init
 	 * @access   private
 	 */
 	private function set_locale() {
@@ -163,6 +163,10 @@ class Atcon {
 		$this->loader->add_action( 'admin_enqueue_scripts', $plugin_admin, 'enqueue_styles' );
 		$this->loader->add_action( 'admin_enqueue_scripts', $plugin_admin, 'enqueue_scripts' );
 
+
+
+		$DS_Admin_abouts = new DS_Admin_abouts();
+		$this->loader->add_action('init', $DS_Admin_abouts, 'ds_about_post_type_registration_init', 1, 1);
 	}
 
 	/**
